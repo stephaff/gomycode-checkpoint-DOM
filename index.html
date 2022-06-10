@@ -9,60 +9,63 @@
     <title>Mon panier</title>
 </head>
 <body>
-    <div class="mon-panier">
-        <h1>Commande <i class="fa-solid fa-cart-shopping"></i></h1>
-        <ul class="entete">
-            <li>Désignation</li>
-            <li>Prix unitaire</li>
-            <li>Quantité</li>
-            <li>Prix total</li>
-        </ul>
-        <ul class="article">
-            <li>Chaise </li>
-            <li class="Prix-unitaire">5 200</li>
-            <li class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></li>
-            <li>0</li>
-            <li><i class="fa-solid fa-trash-can"></i></li>
-            <li><i class="fa-solid fa-heart" style="cursor: pointer;"></i></li>
-        </ul>
-        <ul class="article">
-            <li>Eau Minerale AWA</li>
-            <li class="Prix-unitaire">450</li>
-            <li class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></li>
-            <li>0</li>
-            <li><i class="fa-solid fa-trash-can"></i></li>
-            <li><i class="fa-solid fa-heart"></i></li>
-        </ul>
-        <ul class="article">
-            <li>Pain</li>
-            <li class="Prix-unitaire">150</li>
-            <li class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></li>
-            <li>0</li>
-            <li><i class="fa-solid fa-trash-can"></i></li>
-            <li><i class="fa-solid fa-heart"></i></li>
-        </ul>
-        <ul class="article">
-            <li>Sucrerie</li>
-            <li class="Prix-unitaire">400</li>
-            <li class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></li>
-            <li>0</li>
-            <li><i class="fa-solid fa-trash-can"></i></li>
-            <li><i class="fa-solid fa-heart"></i></li>
-        </ul>
-        <ul class="article">
-            <li>PlayStation 4</li>
-            <li class="Prix-unitaire">245 000</li>
-            <li class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></li>
-            <li>0</li>
-            <li><i class="fa-solid fa-trash-can"></i></li>
-            <li><i class="fa-solid fa-heart"></i></li>
-        </ul>
-        <div class="recap">
-            <h2>Total: </h2>
-            <div class="total-commande"><span>0</span></div>
-        </div>
-        <button class="validation">Valider</button>
-    </div>
+    <h1>Commande <i class="fa-solid fa-cart-shopping"></i></h1>
+    <table>
+        <tr class="entete">
+            <th>Désignation</th>
+            <th>Prix unitaire</th>
+            <th>Quantité</th>
+            <th>Prix total</th>
+        </tr>
+        <tr class="article">
+            <td>Chaise </td>
+            <td class="Prix-unitaire">5 200</td>
+            <td class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></td>
+            <td class="prix-total">0</td>
+            <td class="supprimer"><i class="fa-solid fa-trash-can"></i></td>
+            <td class="like"><i class="fa-solid fa-heart"></i></td>
+        </tr>
+        <tr class="article">
+            <td>Eau Minerale AWA</td>
+            <td class="Prix-unitaire">450</td>
+            <td class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></td>
+            <td class="prix-total">0</td>
+            <td class="supprimer"><i class="fa-solid fa-trash-can"></i></td>
+            <td class="like"><i class="fa-solid fa-heart"></i></td>
+        </tr>
+        <tr class="article">
+            <td>Pain</td>
+            <td class="Prix-unitaire">150</td>
+            <td class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></td>
+            <td class="prix-total">0</td>
+            <td class="supprimer"><i class="fa-solid fa-trash-can"></i></td>
+            <td class="like"><i class="fa-solid fa-heart"></i></td>
+        </tr>
+        <tr class="article">
+            <td>Sucrerie</td>
+            <td class="Prix-unitaire">400</td>
+            <td class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></td>
+            <td class="prix-total">0</td>
+            <td class="supprimer"><i class="fa-solid fa-trash-can"></i></td>
+            <td class="like"><i class="fa-solid fa-heart"></i></td>
+        </tr>
+        <tr class="article">
+            <td>PlayStation 4</td>
+            <td class="Prix-unitaire">245 000</td>
+            <td class="quantite"><i class="fa-solid fa-circle-minus"></i>0<i class="fa-solid fa-circle-plus"></i></td>
+            <td class="prix-total">0</td>
+            <td class="supprimer"><i class="fa-solid fa-trash-can"></i></td>
+            <td class="like"><i class="fa-solid fa-heart"></i></td>
+        </tr>
+        <tr>
+            <td colspan="4" class="recap">Total:</td>
+            <td colspan="2" class="total">0</td>
+        </tr>
+        <tr>
+            <td colspan="6" class="validation"><button><i class="fa-solid fa-cart-shopping"></i> Valider</button></td>
+        </tr>
+    </table>
     <script src="js/all.js"></script>
+    <script src="js/style.js"></script>
 </body>
 </html>
