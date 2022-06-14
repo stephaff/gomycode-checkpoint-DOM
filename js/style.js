@@ -1,5 +1,14 @@
 
  var montant = 0;
+
+function totalCommade(){
+    var prixArticle = document.getElementsByClassName('prix-total');
+        for(var i=0;i<prixArticle.length;i++){
+            montant = montant + parseInt(prixArticle[i].innerHTML);
+        } 
+        total.innerHTML = montant; 
+        montant = 0; 
+}
 //bouton like
 var btnLike = document.getElementsByClassName('btnlike');
 var etat = false;
@@ -21,13 +30,13 @@ for(var i=0;i<btnLike.length;i++){
 
 //bouton moins
 var btnMoins = document.getElementsByClassName('moins');
-var j = 0;
 
 for(var i=0;i<btnMoins.length;i++){
     btnMoins[i].addEventListener('click', function(e){
         if(e.currentTarget.nextElementSibling.innerHTML > 0){
             e.currentTarget.nextElementSibling.innerHTML -= 1;
             e.currentTarget.parentNode.nextElementSibling.innerHTML = parseInt(e.currentTarget.parentNode.previousElementSibling.innerHTML) * parseInt(e.currentTarget.nextElementSibling.innerHTML);
+            totalCommade();
         }
         }
     );
@@ -35,16 +44,25 @@ for(var i=0;i<btnMoins.length;i++){
 
     //bouton plus
 var btnPlus = document.getElementsByClassName('plus');
+var total = document.getElementById('total');
 
 for(var i=0;i<btnPlus.length;i++){
     btnPlus[i].addEventListener('click', function(e){
         e.currentTarget.previousElementSibling.innerHTML =parseInt(e.currentTarget.previousElementSibling.innerHTML) + 1;
         e.currentTarget.parentNode.nextElementSibling.innerHTML = parseInt(e.currentTarget.parentNode.previousElementSibling.innerHTML) * parseInt(e.currentTarget.previousElementSibling.innerHTML);
-        var prixArticle = document.getElementsByClassName('prix-article');
-        for(var i=0;i<prixArticle.length;i++){
-            montant += parseInt(prixArticle[i].innerHTML);
-            console.log(montant);
-        }   
+        totalCommade();
         }
     );
 }
+
+  //bouton supprimer
+  var btnSupprimer = document.getElementsByClassName('supprimer');
+  
+  
+  for(var i=0;i<btnSupprimer.length;i++){
+    btnSupprimer[i].addEventListener('click', function(e){
+        e.currentTarget.parentNode.remove();
+        totalCommade();
+        }
+      );
+  }  

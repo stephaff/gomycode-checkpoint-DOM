@@ -15,7 +15,7 @@ th, td{
 .validation{
     text-align: center;
 }
-.total{
+#total{
     color: red;
     font-size: 2rem;
     text-align: right;
